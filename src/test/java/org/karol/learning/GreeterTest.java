@@ -15,11 +15,10 @@ import javax.ejb.EJB;
 public class GreeterTest {
     @Deployment
     public static JavaArchive createDeployment() {
-        JavaArchive jar = ShrinkWrap.create(JavaArchive.class)
+        return ShrinkWrap.create(JavaArchive.class)
                 .addClass(Greeter.class)
                 .addClass(PhraseBuilder.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-        return jar;
     }
 
     @EJB
