@@ -1,16 +1,14 @@
 package org.karol.learning;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import java.io.PrintStream;
-import javax.inject.Inject;
 
+@Stateless
 public class Greeter {
 
+    @EJB
     private PhraseBuilder phraseBuilder;
-
-    @Inject
-    public Greeter(PhraseBuilder phraseBuilder) {
-        this.phraseBuilder = phraseBuilder;
-    }
 
     public void greet(PrintStream to, String name) {
         to.println(createGreeting(name));

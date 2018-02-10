@@ -1,10 +1,12 @@
 package org.karol.learning;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.Stateless;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
-import javax.annotation.PostConstruct;
 
+@Stateless
 public class PhraseBuilder {
     private Map<String, String> templates;
 

@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import javax.inject.Inject;
+import javax.ejb.EJB;
 
 @RunWith(Arquillian.class)
 public class GreeterTest {
@@ -19,11 +19,10 @@ public class GreeterTest {
                 .addClass(Greeter.class)
                 .addClass(PhraseBuilder.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-//        System.out.println(jar.toString(true));
         return jar;
     }
 
-    @Inject
+    @EJB
     Greeter greeter;
 
     @Test
