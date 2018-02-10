@@ -1,0 +1,14 @@
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="
+        http://jboss.org/schema/arquillian
+        http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <container qualifier="jbossas-managed" default="true">
+        <configuration>
+
+            <property name="arquillian.launch">wildfly-managed</property>
+            <property name="java.util.logging.manager">org.jboss.logmanager.LogManager</property>
+            <property name="jbossHome">target/wildfly-11.0.0.Final</property>
+        </configuration>
+    </container>
+</arquillian>
